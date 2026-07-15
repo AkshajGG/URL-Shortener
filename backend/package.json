@@ -1,0 +1,25 @@
+{
+  "name": "fullstack1",
+  "version": "1.0.0",
+  "description": "URL shortener app",
+  "homepage": "https://github.com/AkshajGG/URL-Shortener-Website#readme",
+  "bugs": {
+    "url": "https://github.com/AkshajGG/URL-Shortener-Website/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AkshajGG/URL-Shortener-Website.git"
+  },
+  "license": "ISC",
+  "author": "Akshaj",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "pg": "^8.22.0"
+  }
+}
