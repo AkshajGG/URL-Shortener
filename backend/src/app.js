@@ -1,5 +1,6 @@
 import express from "express";
 import urlRoutes from "./routes/url.route.js";
+import { redirectURL } from "./controllers/url.controller.js";
 
 const app = express();
 

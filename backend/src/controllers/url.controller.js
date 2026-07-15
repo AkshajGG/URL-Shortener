@@ -1,4 +1,4 @@
-import {} from "../services/services.js";
+import { generateShortCode } from "../services/services.js";
 import { pool } from "../config/database.js";
 
 // POST /api/url/
@@ -35,7 +35,7 @@ export async function getURLInfo(req, res) {
             SELECT *
             FROM urls
             WHERE short_code = $1
-            `
+            `,
             [code]
         )
 
@@ -61,7 +61,7 @@ export async function deleteURL(req, res) {
             `
             DELETE FROM urls
             WHERE short_code = $1
-            `
+            `,
             [code]
         );
         res.status(201).json({
@@ -84,12 +84,12 @@ export async function redirectURL(req, res) {
             SELECT original_url
             FROM urls
             WHERE short_code = $1
-            `
+            `,
             [code]
         );
         
         res.redirect(
-            result.rows[0].originalURL
+            result.rows[0].original_url
         );
     } catch (err) {
         console.error(err);
